@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinaria</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/pages/serviciosPrestados.html">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    <form class="form" id="citaForm">
+        <h2>Agendar Cita</h2>
+        <p type="Nombre de la mascota:"><input placeholder="Nombre de la mascota" id="petName" required></input></p>
+        <p type="Nombre del Dueño"><input placeholder="Nombre del Dueño" id="ownerName"required></input>
+        </p><label for="datetime">Fecha y Hora:</label>
+        <input type="datetime-local" id="datetime" name="datetime" required><br><br><br>
+        <br>
+        <button type="submit" class="cta">Agendar</button>
+      </form>
+      <div id="messageContainer"></div>
+      <h2>Citas Registradas</h2>
+      
+    </script>
+      <table id="appointmentTable">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Nombre de la Mascota</th>
+                  <th>Nombre del Dueño</th>
+                  <th>Fecha y Hora</th>
+              </tr>
+          </thead>
+          <tbody>
+             
+          </tbody>
+      </table>
+      <button id="updateTableBtn">Actualizar Tabla</button>
+</body>
+<script src="/js/script.js"></script>
+</html>

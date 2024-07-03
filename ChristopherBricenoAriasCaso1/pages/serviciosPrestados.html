@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Dropdown y Total a Pagar</title>
+    <!-- Puedes enlazar aquí tu archivo de estilos CSS -->
+    <link rel="stylesheet" href="/css/serviciosPrestados.css">
+</head>
+<body>
+    <nav>
+        <ul>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/pages/serviciosPrestados.html">Services</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    <h2>Formulario con Dropdown y Total a Pagar</h2>
+    <label for="petName">Nombre de la Mascota</label><input type="text" name="nombreMascota" id="petname">
+    <form id="paymentForm">
+        <!-- Dropdown para seleccionar un producto -->
+        <div class="form-group">
+            <label for="productSelect">Selecciona un producto:</label>
+            <select id="productSelect" name="product">
+                <option value="consultaGeneral">Consulta General $20</option>
+                <option value="vacunacion">Vacunacion $10</option>
+                <option value="control">Control $12</option>
+                <option value="desparacitacion">Desparacitacion $8</option>
+                <option value="cortePelo">Corte pelo $25</option>
+                <!-- Agrega más opciones según sea necesario -->
+            </select>
+        </div>
+
+        <!-- Input de texto para ingresar la cantidad -->
+        <div class="form-group">
+            <label for="quantityInput">Cantidad:</label>
+            <input type="number" id="quantityInput" name="quantity" min="1" value="1" required>
+        </div>
+
+        <!-- Campo para mostrar el total a pagar -->
+        <div class="form-group">
+            <label for="totalAmount">Total a pagar:</label>
+            <input type="text" id="totalAmount" name="total" readonly>
+        </div>
+
+        <!-- Botón para calcular el total -->
+        <button type="button" onclick="calcularTotal()">Calcular Total</button>
+    </form>
+
+    <button type="button" onclick="">Generar factura</button>
+   
+    <!-- Script para calcular el total y mostrarlo en el campo correspondiente -->
+    <script src="/js/serviciosPrestados.js"></script>    
+    
+</body>
+</html>
